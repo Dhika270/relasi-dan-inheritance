@@ -8,7 +8,6 @@ class pasien{
     public:
     string nama;
     vector<dokter*> daftar_dokter;
-
     pasien(string pNama); nama(pNama) {
         cout << "Pasien \"" << nama << "\" ada\n";
     }
@@ -48,4 +47,10 @@ void pasien::cetakDokter() {
     for (auto& a : daftar_dokter) {
         cout << a->nama << "\n";
     }
+    cout << endl;
+}
+
+void dokter:: tambahanPasien(pasien* pPasien) {
+    daftar_pasien.push_back(pPasien);
+    pPasien->tambahanDokter(this);
 }
