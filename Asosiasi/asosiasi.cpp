@@ -8,6 +8,7 @@ class pasien{
     public:
     string nama;
     vector<dokter*> daftar_dokter;
+
     pasien(string pNama); nama(pNama) {
         cout << "Pasien \"" << nama << "\" ada\n";
     }
@@ -36,8 +37,15 @@ class dokter {
 
 };
 
+void pasien::tambahanDokter(dokter* pDokter) {
+    daftar_dokter.push_back(pDokter);
+}
+
 void pasien::cetakDokter() {
     cout << "Daftar dokter yang menangani pasien \""
     << this->nama << "\":\n";
     // auto bisa digunakan dalam perulangan
+    for (auto& a : daftar_dokter) {
+        cout << a->nama << "\n";
+    }
 }
