@@ -68,5 +68,13 @@ int main() {
     dokter* varPasien1 = new dokter("Andi");
     dokter* varPasien2 = new dokter("Lia");
 
+    varPasien1->tambahanPasien(varPasien1);
+    varPasien1->tambahanPasien(varPasien2);
+    varPasien2->tambahanPasien(varPasien2);
+
+    varDokter1->cetakPasien();
+    varDokter2->cetakPasien();
+    varPasien1->cetakDokter();
+    varPasien2->cetakDokter();
     
 }
