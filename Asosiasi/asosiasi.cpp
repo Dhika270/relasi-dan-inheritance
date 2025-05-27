@@ -27,4 +27,8 @@ class dokter {
         dokter(string pNama): nama(pNama) {
             cout << "dokter \"" << nama << "\" ada\n";
         }
+        ~dokter() {
+            cout << "Dokter \"" << nama
+            << "\" tidak ada\n";
+        }
 }
